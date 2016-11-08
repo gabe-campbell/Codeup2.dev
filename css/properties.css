@@ -1,0 +1,62 @@
+#normal {
+  color:black;
+}
+
+#red {
+  color: #FF0000;
+}
+
+#green {
+  color: #00FF00;
+}
+
+#blue {
+  color: #0000FF;
+}
+
+#black {
+  color: #000000;
+}
+
+#white {
+  color: #FFFFFF;
+}
+
+#grey {
+  color: #808080;
+}
+
+#underline {
+  text-decoration: underline;
+}
+#line {
+  text-decoration: line-through;
+}
+
+#italic {
+  font-style: italic;
+}
+
+#large {
+  font-size: 5em;
+}
+
+#small {
+  font-size: .5em;
+}
+
+#bold {
+  font-weight: 900;
+}
+
+#background-red {
+  background-color: red;
+}
+
+#background-blue {
+  background-color: blue;
+}
+
+#list {
+  list-style: inside;
+}

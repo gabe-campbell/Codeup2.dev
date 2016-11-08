@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1.2 My First HTML Form</title>
+  </head>
+  <body>
+    <form action="http://requestb.in/163klyq1" method="POST">
+
+      <h2>Login Form</h2>
+      <p>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+      </p>
+      <p>
+        <label for="password">Password&nbsp</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+      </p>
+      <p>
+        <input type="submit" value="login" name="submit">
+      </p>
+      <p>
+        <button type="submit" name="button" value="button">Login</button>
+      </p>
+
+      <hr>
+
+      <input type="hidden" id="user_id" name="user_id" value="1234">
+      <textarea name="email_body" id="email_body" cols="30" rows="10" placeholder="Compose email here..."></textarea>
+
+      <hr>
+
+      <h2>Email Form</h2>
+      <label for="email_to">To:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+      <input type="text" name="email_to" id="email_to">
+      <br>
+      <label for="email_from">From:&nbsp&nbsp&nbsp</label>
+      <input type="text" name="email_from" id="input_from">
+      <br>
+      <label for="email_subject">Subject:</label>
+      <input type="text" name="email_subject" id="email_subject">
+      <br>
+      <textarea name="email_compose" id="email_compose" cols="27" rows="10"></textarea>
+      <br>
+      <button id="email_send" name="email_send"type="submit">Send</button>
+
+      <hr>
+      <h2>Checkbox and Radio buttons</h2>
+      <input type="checkbox" id="mailing_list" name="mailing_list" value="yes">
+      <label for="mailing_list">Sign me up for the mailing list!</label>
+      <button type="submit">Sign me up!</button>
+
+      <br>
+
+      <p>What operating system do you use?
+        <label><input type="checkbox" name="os[]" id="os1" value="linux">Linux</label>
+        <label><input type="checkbox" name="os[]" id="os2" value="osx" checked>OS X</label>
+        <label><input type="checkbox" name="os[]" id="os3" value="windows">Windows</label>
+        <button type="submit" name="button">Submit</button>
+      </p>
+
+      <br>
+
+      <p>What is the capitol of Texas?
+        <label>
+          <input type="radio" name="q1" value="houston">
+          Houston
+        </label>
+        <label>
+          <input type="radio" name="q1" value="dallas">
+          Dallas
+        </label>
+        <label>
+          <input type="radio" name="q1" value="austin">
+          Austin
+        </label>
+        <label>
+          <input type="radio" name="q1" value="sanantonio">
+          San Antonio
+        </label>
+        <button type="submit">Answer</button>
+      </p>
+
+      <p>What kind of pet is your favorite?
+        <label><input type="radio" name="favorite[]" id="favorite1" value="cat">Cat</label>
+        <label><input type="radio" name="favorite[]" id="favorite2" value="dog">Dog</label>
+        <label><input type="radio" name="favorite[]" id="favorite3" value="other">Other</label>
+      </p>
+
+      <p>Which of these pets did you have first?
+        <label><input type="radio" name="first[]" id="first1" value="cat">Cat</label>
+        <label><input type="radio" name="first[]" id="first2" value="dog">Dog</label>
+        <label><input type="radio" name="first[]" id="first3" value="other">Other</label>
+      </p>
+
+      <p>Which of these do you own now?
+        <label><input type="checkbox" name="now[]" id="now1" value="cat">Cat</label>
+        <label><input type="checkbox" name="now[]" id="now2" value="dog">Dog</label>
+        <label><input type="checkbox" name="now[]" id="now3" value="other">Other</label>
+      </p>
+
+      <p>Which of these will you own in the future?
+        <label><input type="checkbox" name="future[]" id="future1" value="cat">Cat</label>
+        <label><input type="checkbox" name="future[]" id="future2" value="dog">Dog</label>
+        <label><input type="checkbox" name="future[]" id="future3" value="other">Other</label>
+      </p>
+      <button type="submit" name="pets">Submit</button>
+
+      <hr>
+
+      <p>
+        <h2>Select Boxes</h2>
+        <label for="transmission">Select your transmission type:</label>
+        <select class="select" name="transmission" id="transmission">
+          <option selected>--Choose Transmission Type--</option>
+          <option value="1">Automatic</option>
+          <option value="2">Manual</option>
+        </select>
+        <button type="submit">Submit</button>
+      </p>
+
+      <p>
+        <label for="os">What operating systems do you use?</label>
+        <select class="os" name="os[]" id="os" multiple>
+          <option value="linux">Linux</option>
+          <option value="osx">OS X</option>
+          <option value="windows">Windows</option>
+        </select>
+        <button type="submit" name="button">Submit</button>
+      </p>
+
+      <p>Question1
+        <label><input type="radio" name="Question1" id="Q1Y" value="yes">Yes</label>
+        <label><input type="radio" name="Question1" id="Q1N" value="no">No</label>
+      </p>
+      <p>Question2
+        <label><input type="radio" name="Question2" id="Q2Y" value="yes">Yes</label>
+        <label><input type="radio" name="Question2" id="Q2N" value="no">No</label>
+      </p>
+      <p>Question3
+          <label for="Question3">Yes or No?</label>
+          <select class="question3" name="question3[]" id="answer">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+      </p>
+
+      <p>Which of these do you own now?
+        <select name="nowmulti[]" id="multianswer" multiple>
+          <option value="multicat" name="nowmulti[]" id="nowmulti1">Cat</option>
+          <option value="multidog" name="nowmulti[]" id="nowmulti2">Dog</option>
+          <option value="multiother" name="nowmulti[]" id="nowmulti3">Other</option>
+        </select>
+      </p>
+
+      <button type="submit" name="button">submit</button>
+    </form>
+  </body>
+</html>

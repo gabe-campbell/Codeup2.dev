@@ -1,0 +1,24 @@
+.fancy-header {
+  color:blue;
+}
+
+.fancy-paragraph {
+  color: green;
+}
+
+#fancier-paragraph {
+  color: gold;
+  font-style: italic;
+}
+
+#hover:hover {
+  color:red;
+}
+
+#vistited:visited {
+  color: yellow;
+}
+
+#unvisited:link {
+  color: green;
+}

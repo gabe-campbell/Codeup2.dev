@@ -1,0 +1,50 @@
+nav {
+  border-bottom: 2px solid #cccccc;
+  margin-top: -2em;
+  margin-left: -1em;
+  width: 101.75%;
+  height: 3.6em;
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #999999;
+  text-decoration: none;
+}
+
+.navitem {
+  list-style: none;
+  height: 1.5em;
+  width: auto;
+
+  position: relative;
+  top: .25em;
+  padding: .75em .25em 0em .25em;
+
+  color: #999999;
+  text-shadow: .25px .25px black;
+  font-size: 1.5em;
+}
+
+.navitem:hover, a:hover {
+  background-color: #cccccc;
+  transition-duration: .75s;
+  color: #404040;
+}
+
+#navitem_1 {
+  float: left;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-left: -2em;
+}
+
+#navitem_2, #navitem_3, #navitem_4 {
+  float: right;
+  margin-left: .75em;
+}
+
+#navitem_2 {
+  margin-right: -.5em;
+  padding-right: 1em;
+}

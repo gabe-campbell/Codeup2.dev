@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+  color: blue;
+  text-decoration: underline;
+}
+
+body {
+  background-image: url(../img/background2X.png);
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+
+ul, ol {
+  list-style: upper-alpha;
+}
+
+td {
+
+  border: 2px solid black;
+  background-color: #808080;
+}
+
+th {
+  border: 2px solid black;
+  background-color: #808080;
+}
+
+a:hover {
+  color: green;
+}
