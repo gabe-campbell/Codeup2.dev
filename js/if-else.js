@@ -1,3 +1,5 @@
+'use strict';
+
 var gradeOne = 70;
 var gradeTwo = 80;
 var gradeThree = 95;
