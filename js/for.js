@@ -1,3 +1,4 @@
+'use strict';
 // // // for (var i = 1; i < 11; i++) {
 // // //   if (i == 10) {
 // // //     for (j = 0; j < i; j++) {

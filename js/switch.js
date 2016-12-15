@@ -1,4 +1,4 @@
-``'use strict';
+'use strict';
 
 var whatAmI = "I am a string";
 
