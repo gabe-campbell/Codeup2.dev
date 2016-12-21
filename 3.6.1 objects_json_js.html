@@ -41,9 +41,7 @@
           "Title":"A Song of Ice and Fire",
           "Author": {
             "firstName":"George",
-            "firstMiddleName":"R.",
-            "secondMiddleName":"R.",
-            "lastName":"Martin"
+            "lastName":"R.R. Martin"
           }
         },
 
@@ -51,8 +49,7 @@
           "Title":"Ender's Game",
           "Author": {
             "firstName":"Orson",
-            "middleName":"Scott",
-            "lastName":"Card"
+            "lastName":"Scott Card"
           }
         }
       ]
@@ -63,6 +60,18 @@
 
       // log out the books array
       console.log(books);
+
+      books.push(
+        {
+          "Title":"1984",
+          "Author": {
+            "firstName":"George",
+            "lastName":"Orwell"
+          }
+        }
+      );
+
+      books.shift();
 
       // todo:
       // Loop through the array of books using .forEach and print out the specified information about each one.
