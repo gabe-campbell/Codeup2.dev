@@ -1,0 +1,84 @@
+<DOCTYPE html>
+  <html>
+    <head><title>3.6.1 JSON Objects</title></head>
+    <body>
+      <script>
+      'use strict';
+
+      // todo:
+      // Create an array of objects that represent books.
+      // Each book should have a title and an author.
+      // The book author should be an object with a firstName and lastName.
+
+      // var books = new Object();
+      // same as using the below
+      var books = [
+        {
+          "Title":"The Martian",
+          "Author": {
+            "firstName":"Andy",
+            "lastName":"Weir"
+          }
+        },
+
+        {
+          "Title":"The Road",
+          "Author": {
+            "firstName":"Cormac",
+            "lastName":"McCarthy"
+          }
+        },
+
+        {
+          "Title":"The Gunslinger",
+          "Author": {
+            "firstName":"Stephen",
+            "lastName":"King"
+          }
+        },
+
+        {
+          "Title":"A Song of Ice and Fire",
+          "Author": {
+            "firstName":"George",
+            "firstMiddleName":"R.",
+            "secondMiddleName":"R.",
+            "lastName":"Martin"
+          }
+        },
+
+        {
+          "Title":"Ender's Game",
+          "Author": {
+            "firstName":"Orson",
+            "middleName":"Scott",
+            "lastName":"Card"
+          }
+        }
+      ]
+
+
+      // Be creative and add at least 5 books to the array
+      // var books = [todo];
+
+      // log out the books array
+      console.log(books);
+
+      // todo:
+      // Loop through the array of books using .forEach and print out the specified information about each one.
+      // start loop here
+        // console.log("Book #" + todo);
+        // console.log("Title: " + todo);
+        // console.log("Author: " + todo);
+        // console.log("---");
+      // end loop here
+
+      books.forEach(function(element, index, array){
+        console.log("Book #" + (index + 1));
+        console.log("Title: " + element.Title);
+        console.log("Author: " + element.Author.firstName + " " + element.Author.lastName);
+        console.log("---");
+      });
+      </script>
+    </body>
+  </html>
