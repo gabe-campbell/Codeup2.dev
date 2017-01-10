@@ -3,7 +3,7 @@ var greeting = 'Howdy'
 var name = 'Molly'
 var customSign = 'Montague House'
 var totalTiles = customSign.length;
-var subTotal = 70;
+var subTotal = totalTiles * 5;
 var shipping = 7;
 var grandTotal = subTotal + shipping;
 
