@@ -6,7 +6,7 @@ var msg;        // Message
 if (score > pass) {
   msg = 'Congratulations, you passed!';
 } else {
-  msg = 'Have anther go!';
+  msg = 'Have another go!';
 }
 
 var el = document.getElementById('answer');
