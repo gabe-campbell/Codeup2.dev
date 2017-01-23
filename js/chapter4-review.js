@@ -11,7 +11,7 @@ if (operator === 'addition') {
   }
 } else {
   while (i < 11) {
-    msg += i + ' x ' + table + ' = ' + ( i * table);
+    msg += i + ' x ' + table + ' = ' + (i * table);
     msg += '<br>'
     i++;
   }
