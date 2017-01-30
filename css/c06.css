@@ -181,6 +181,8 @@ select, option {
 #feedback.warning {background-image: url('../images/warning.png');}
 #feedback.tip {background-image: url('../images/tip.png');}
 
+#packageHint.warning {background-image: url('../images/warning.png');}
+
 #packageHint {
   color: #fff;
   background-image: url('../images/hint.png');
