@@ -8,8 +8,6 @@ function addItem(e) {   // Declare function
   e.preventDefault();   // Prevent link action
   newEl = document.createElement('li');   // New <li> element
   newText = document.createTextNode(prompt('What item do you want to add to your list?')); // New text node
-  newEl.appendChild(newText);   // Add text to <li>
-  elList.appendChild(newEl);    // Add <li> to list
 }
 
 function updateCount() {    // Declare function
