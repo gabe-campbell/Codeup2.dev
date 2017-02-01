@@ -25,7 +25,7 @@ $(function() {
   $('#showForm').on('click', function() {     // When click on add item button
     $newItemButton.hide();                    // Hide the new item button
     $newItemForm.show();                      // Show the new item form
-    $textInput.focus();                     // Give the new item form focus
+    $textInput.focus();                     // Give the new item text input focus
   });
 
   // ADDING A NEW LIST ITEM
@@ -35,7 +35,7 @@ $(function() {
     $list.append('<li>' + text + '</li>');    // Add item to the end of the list
     $('input:text').val('');                  // Empty the text input
     updateCount();                            // Update the counter
-    $newItemForm.hide();
+    $newItemForm.hide();                      // These two lines reintroduce the ability to hide/show the needed elements
     $newItemButton.show();
   });
 
