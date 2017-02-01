@@ -9,3 +9,5 @@ This Repository contains exercises from the following sources:
 -"Javascript & JQuery" by Jon Duckett
 
 -"PHP and MySQL for Dynamic Websites" by Larry Ullman
+
+-The jQuery Documentation at http://api.jquery.com
