@@ -8,6 +8,8 @@ This Repository contains exercises from the following sources:
 
 -"Javascript & jQuery" by Jon Duckett
 
+-Angular Basics resources at http://www.angularjsbook.com/
+
 -"PHP and MySQL for Dynamic Websites" by Larry Ullman
 
 -The jQuery Documentation at http://api.jquery.com
