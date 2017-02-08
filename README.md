@@ -13,3 +13,5 @@ This Repository contains exercises from the following sources:
 -"PHP and MySQL for Dynamic Websites" by Larry Ullman
 
 -The jQuery Documentation at http://api.jquery.com
+
+This list will be updated continuously as I explore more topics and gain new skills
