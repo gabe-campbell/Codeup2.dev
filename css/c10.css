@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
-  background: url(../images/paint-backdrop.jpg) no-repeat center center fixed; 
+  background: url(../images/paint-backdrop.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -94,7 +94,7 @@ a {
 .deal h2, .deal p, .deal a {width: 240px;}
 a {font-size: 80%;}
 
-a[href='try-catch-finally.html'] {
+a[href='JNQ try-catch-finally.html'] {
 	display: inline-block;
 	margin-top: 20px;
 	background-color: #1fbba6;
