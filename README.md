@@ -14,4 +14,4 @@ This Repository contains exercises from the following sources:
 
 -The jQuery Documentation at http://api.jquery.com
 
-This list will be updated continuously as I explore more topics and gain new skills
+This list will be updated continually as I explore more topics and gain new skills
