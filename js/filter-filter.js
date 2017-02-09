@@ -17,13 +17,17 @@ $(function() {
     {
       name: 'Nigel',
       rate: 120
+    },
+    {
+      name: 'Gabriel',
+      rate: 145
     }
   ];
 
 
   // THE FUNCTION ACTS AS A FILTER
   function priceRange(person) {                        // Declare priceRange()
-    return (person.rate >= 65) && (person.rate <= 90); // In range returns true
+    return (person.rate >= 65) && (person.rate <= 200); // In range returns true
   };
 
   // FILTER THE PEOPLE ARRAY & ADD MATCHES TO THE RESULTS ARRAY
