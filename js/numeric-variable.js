@@ -1,23 +1,24 @@
-//Create three variable to store the information needed
+// The script starts by creating three variables
 
 var price;
 var quantity;
 var total;
 
-//Assign value to the price and quantity variables
+// Assign value to the price and quantity variables
+
 price = 5;
 quantity = 14;
 
-//Calculate the total by multiplying the price by quantity
+// Calculate the total by multiplying the price by quantity
+
 total = price * quantity;
 
-//Get the element with an id of cost
+// Creates variable el and gets the element with an id of cost
 
 var el = document.getElementById('cost');
+
+// Sets the text of el to display the total
+
 el.textContent = '$' + total;
 
-/*
-NOTE: textContent does not work in IE8 or earlier
-You can use innerHTML, but note the security issues on p228-231
-el.innerHTML = '$' + total;
-*/
+// This exercise demonstrates creating variables to hold numeric values, and then uses those values to perform operations and then displays the result to the page

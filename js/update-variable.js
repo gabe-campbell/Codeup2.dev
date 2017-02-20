@@ -1,16 +1,25 @@
-//Create variables and assign them values
+// Create variables and assign them values
+
 var inStock = true;
 var shipping  = false;
 
 /* Some other processing might go here and, as a result, the script might need to change these values */
+// Swaps the value of the boolean values of each variable
 
 inStock = false;
 shipping = true;
 
-//Get the element with an id of stock
+// Get the element with an id of stock
+
 var elStock = document.getElementById('stock');
-//Set class name with value of inStock variable
+
+// Set class name with value of inStock variable
+
 elStock.className = inStock;
 var elShip = document.getElementById('shipping');
-//Set class name with value of shipping variable
+
+// Set class name with value of shipping variable
+
 elShip.className = shipping;
+
+// This exercise shows how to update a variable after it has been created and set
