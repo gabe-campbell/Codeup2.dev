@@ -6,14 +6,16 @@ var msg = '';                       // Message
 // Loop through the items in the array
 for (var i = 0; i < arrayLength ; i++) {
 
-  //Arrays are zero based so 0 is round 1
+  // Arrays are zero based so 0 is round 1
   roundNumber = (i + 1);
 
   // Write the current round to message
   msg += 'Round ' + roundNumber + ': ';
 
-  //Get the score from the scores array
+  // Get the score from the scores array
   msg += scores[i] + '<br>'
 }
 
 document.getElementById('answer').innerHTML = msg;
+
+// This exercise uses a FOR loop to go through each score in the array and to display it with its corresponding round number

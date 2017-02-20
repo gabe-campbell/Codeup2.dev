@@ -22,3 +22,5 @@ switch (level) {
 
 var el = document.getElementById('answer');
 el.textContent = msg;
+
+// This exercise uses a switch statement to display the corresponding message based on the level the user is on, if there is no level the code will default to the last code block
