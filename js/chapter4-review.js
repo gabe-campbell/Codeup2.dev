@@ -19,3 +19,5 @@ if (operator === 'addition') {
 
 var el = document.getElementById('blackboard');
 el.innerHTML = msg;
+
+// This exercise uses various logical operators to display different mathematical tables

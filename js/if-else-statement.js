@@ -11,3 +11,5 @@ if (score > pass) {
 
 var el = document.getElementById('answer');
 el.textContent = msg;
+
+// This exercise uses an if-else statement to determine which code block to execute
