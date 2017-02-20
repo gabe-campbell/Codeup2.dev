@@ -1,27 +1,27 @@
-//Create variables to hold the name and note text.
+// Create variables to hold the name and note text
+
 var username;
 var message;
 
-//Asssign values to these variables
+// Assign values to these variables
+
 username  = 'Molly'
 message =  "See our upcoming range";
 
-//Get the element with an id of name
+// Get the element with an id of name
+
 var elName = document.getElementById('name');
 
-//Replace the content of this element
+// Replace the content of this element
+
 elName.textContent = username;
 
-//Get the lement with an id of note.
+// Get the lement with an id of note.
+
 var elNote = document.getELementById('note');
 
-//Replace the content of this element.
+// Replace the content of this element.
 
 elNote.textContent = message;
 
-/*
-NOTE: textContent does not work in IE8 or earlier
-You can use innerHTML, but note the security issues on p228-231
-elName.innerHTML = username;
-elNote.innerHTML = message;
-*/
+// This exercise demonstrates the storing of strings to variables and then using those variables to display text to the page
