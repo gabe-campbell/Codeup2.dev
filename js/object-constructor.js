@@ -9,12 +9,9 @@ hotel.checkAvailability = function() {
 };
 
 var elName = document.getElementById('hotelName'); // Get element
-elName.textContent = hotel.name; //Update HTML with property of the object
+elName.textContent = hotel.name; // Update HTML with property of the object
 
-var elRooms = document.getElementById('rooms'); //Get element
+var elRooms = document.getElementById('rooms'); // Get element
 elRooms.textContent = hotel.checkAvailability(); // Update HTML with result of method
 
-/*
-NOTE: textContent does not work in IE8 or earlier
-You can use innerHTML on lines 12 and 15, but note the security issues on p228-231
-*/
+// Uses the object constructor to show another method to object creation
