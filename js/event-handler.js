@@ -9,3 +9,6 @@ function checkUsername() {  // Declare function
 
 var elUsername = document.getElementById('username'); // Get username input
 elUsername.onblur = checkUsername; // When it loses focus call checkUsername();
+
+// This exercise creates a function that is called upon the username element when that element loses focus
+// The focus checks the value of the user input, and if the number of characters is too short then a warning message is displayed, if the username is long enough then the warning message is cleared

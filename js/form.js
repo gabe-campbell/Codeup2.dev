@@ -45,3 +45,18 @@ elForm.addEventListener('submit', checkTerms, false);
 elForm.addEventListener('change', clearMessage, false);
 elForm.addEventListener('submit', checkPackage, false);
 elSelectPackage.addEventListener('change', packageHint, false);
+
+// This exercise begins by declaring a series of variables and storing references to each corresponding element
+// It then adds a series of four event listeners, which listen for different events and call different functions
+
+// The first event listener is on the form element and fires upon a submit, calling the checkTerms() functions
+// checkTerms() checks if the checkbox is checked, if it isn't then it displays a message and prevents it from submitting
+
+// The second event listener is also on the form element and fires on any change, calling the clearMessage() functions
+// clearMessage() checks to see if the checkbox is checked, and if so it clears the HTML created in checkTerms()
+
+// The third event listener is also on the form element and fires upon a submit, calling the checkPackage() function
+// checkPackage() makes it so that if the package selected is still on the default option then it displays a warning message and prevents the page from submitting
+
+// The fourth event listener is on the select element and fires on any change to it, calling the packageHint() function
+// packageHint() checks to see which option is selected, and then displays the corresponding message 

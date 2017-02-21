@@ -14,7 +14,7 @@ function checkLength(e, minLength) {  // Declare function
 }
 
 var elUsername = document.getElementById('username'); // Get username input
-if (elUsername.addEventListener) { // Ife event listener is supported
+if (elUsername.addEventListener) { // If event listener is supported
   elUsername.addEventListener('blur', function(e) { // On blur event
     // This function is checkLength NOT checkUsername
     checkLength(e, 5);  // Call checkLength()
@@ -25,3 +25,8 @@ if (elUsername.addEventListener) { // Ife event listener is supported
     checkLength(e, 5);   // Call checkLength()
   });
 }
+
+// This exercise gets the username input and if addEventListener is supported then it adds the event listener calling the checkLength function, this function is passed e (the event object) and the parameter that controls the minLength
+// If addEventListener is not supported then the IE fallback (attachEvent) is used
+
+// the checkLength function is passed the event object and the minLength parameter, and checks if the event object is not supported, if it doesn't then it used the IE fallback, if it is supported then the function gets the target of the event and does a comparison to the minLength parameter, similar to the previous exercises

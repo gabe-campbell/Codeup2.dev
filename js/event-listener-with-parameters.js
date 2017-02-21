@@ -14,3 +14,7 @@ function checkUsername(minLength) { // Declare function
 elUsername.addEventListener('blur',  function() { // When it loses focus
   checkUsername(5); // Pass argument here
 }, false);
+
+// Like the previous exercise a function is created, which is called upon the specified event being fired, but with this technique a parameter is able to be passed into the function
+// This is done by calling an IIFE upon the firing of the event, which in turn calls the desired function with the passed parameter
+// In the actual function declaration a parameter is passed, which will be set to the value passed into the function when it is called, this is then used as part of the if statement

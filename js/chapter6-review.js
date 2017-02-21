@@ -1,7 +1,9 @@
+// The script begins by declaring and storing references to elements of the page
 var noteInput, noteName, textEntered, target;   // Declare variables
 
 noteName = document.getElementById('noteName');  // Element that holds note
 noteInput = document.getElementById('noteInput');   // Input for writing the note
+
 function writeLabel(e) {                      // Declare function
   if (!e) {                                   // If event object is not present
     e = window.event;                         // Use IE-8 fallback
@@ -58,3 +60,13 @@ if(document.addEventListener) {     // if event listener is supported
   // If keyup fires on noteInput call writeLabel()
   noteInput.attachEvent('onkeyup', writeLabel);
 }
+
+// The script checks to see if the event listener is supported, and if it is then it will set two event listeners
+  // The first event listener is passed the event object (in this case the recorder button) and will fire upon a click on the button, calling recorderControls()
+  // recorderControls() will gain the target of the event and prevent the link from submitting
+  // It then uses a switch statement to check what data-state the button is in, if it is in the record state it will call the stop() function on the target, toggling it to record; if it is in the stop state, it will call the record() function, toggling it to stop
+  // When the toggle occurs it changes the CSS rules accordingly
+
+  // The second event listener is on the noteInput element and fires upon any input in the text field, calling the writeLabel function
+  // noteInput() gains the target of the event and gets the value that is entered, it then gives that value to the noteName element
+// In each event listener or get target case there is an IE fallback using .attachEvent('on-' ) and window.event, respectively 

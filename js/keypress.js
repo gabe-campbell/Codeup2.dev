@@ -12,3 +12,6 @@ function charCount(e) {   // Declare function
 
 el = document.getElementById('message');    // get msg element
 el.addEventListener('keyup', charCount, false); // on keyup - call charCount() in bubbling phase
+
+// This exercise gets the #message element and adds an event listener to it, which fires on a keyup, calling the charCount() function
+// The charCount() function then gets the text that was input by the user and calculates how many remaining characters are available and displays that number, it also gets the last character that was displayed and disaplays its ASCII code

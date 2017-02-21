@@ -31,3 +31,7 @@ if (el.addEventListener) {
 }
 
 */
+
+// This exercise gets the username input and adds two event listeners to it
+// The first listener fires the tipUsername() function when the username input gains focus, which addEventListener a helpful tip underneath the input
+// The second listener fires the checkUsername() function when the username input loses focus, which checks if the length of the input value from the user is long enough, if it isn't then it changes the tip to a warning, if it is then it clears both messages

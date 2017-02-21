@@ -8,11 +8,15 @@ var cy = document.getElementById('cy');   // Element to hold clientY
 function showPosition(event) {    // Declare function, pass in event as parameter
   sx.value = event.screenX; // update element with screenX
   sy.value = event.screenY; // update element with screenY
-  px.value = event.screenX; // update element with pageX
-  py.value = event.screenY; // update element with pageY
-  cx.value = event.screenX; // update element with clientX
-  cy.value = event.screenY; // update element with clientY
+  px.value = event.pageX; // update element with pageX
+  py.value = event.pageY; // update element with pageY
+  cx.value = event.clientX; // update element with clientX
+  cy.value = event.clientY; // update element with clientY
 }
 
 var el = document.getElementById('body');   // Get body element
 el.addEventListener('mousemove', showPosition, false);  // Moving the mouse updates position
+
+// This exercise starts by creating variables to store references to different elements on the page
+// It then gets the body element and then uses an event listener which fires upon any mouse movement, calling the showPosition() function
+// showPosition() then finds the values for the X and Y coordinates for the screen, page, and client, it then updates the value of the corresponding page element to display those values
