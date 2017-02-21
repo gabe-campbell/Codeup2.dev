@@ -5,3 +5,6 @@ $('li[id="three"]').hide().delay(600).fadeIn(650);
 $('li[id="four"]').hide().delay(750).fadeIn(650);
 $('li:first-child').addClass('next');
 $('li.priority').addClass('highlight');
+
+// This exercise shows how to select list items with a specific id and then chains several jQuery methods together on one line, causing the selected elements to be immediately hidden and then faded in after a short delay
+// The script then demonstrates using jQuery to select child elements and other class elements

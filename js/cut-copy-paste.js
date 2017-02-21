@@ -12,3 +12,11 @@ $(function() {
   $moveItem.appendTo('ul');
 
 });
+
+// This script creates a jQuery object which references all of the p tags on the page
+// A new jQuery object is created and is set to clone the p tag object that was originally created, and then the original p tag is removed from the DOM
+// The cloned quote is then inserted after the h2 element
+
+// A new jQuery object is created which references the element with an id of 'one', it is then detached from the DOM and then reinserted at the end of the ul
+
+// This script ultimately copies the quote that was originally at the bottom of the page, and moves it to under the heading. It then takes the first list item and moves it to the end of the list

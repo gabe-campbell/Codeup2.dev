@@ -16,3 +16,7 @@ $(function() {
     'padding-left': '+=75'
   });
 });
+
+// This function creates a variable and stores the background-color of the first li element
+// It then selects the ul and appends a p tag containing the stored background-color
+// Finally, it selects all li elements and sets a series of new CSS rules to each one
