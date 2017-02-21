@@ -16,3 +16,6 @@ function dismissNote() {    // Declare function
 
 var elClose = document.getElementById('close'); // Get the close button
 elClose.addEventListener('click', dismissNote, false); // Click the close-clear note
+
+// This exercise listens for a click event on the #close element and then fires the dismissNote() function
+// The dismissNote() function then removes the div containing the note from the document

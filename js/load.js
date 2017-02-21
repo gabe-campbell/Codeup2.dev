@@ -19,3 +19,6 @@ if (el.addEventListener) {
 }
 
 */
+
+// This function uses an event listener on the window object to call on the setup() function once the page finishes loading
+// setup() gets the username input and gives it focus once the page has loaded
