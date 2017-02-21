@@ -12,3 +12,5 @@ var position = document.getElementsByTagName('ul')[0];
 
 // Insert the new child element into its position.
 position.appendChild(newEl);
+
+// This exercise the creation of elements and text nodes and the appending of these elements to their desired location
