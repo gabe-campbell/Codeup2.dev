@@ -42,3 +42,23 @@ $('nav a').on('click', function(e) {
  $(data) creates a jQuery object containing the response.
  .find('#container') gets the container element from that response hides it and fades it in
 */
+
+
+// The script starts by creating an event listener on the link tags in the nav element firing on a click, triggering an anonymous function that has been passed the event object as a parameter
+  // The function first prevents the page from submitting
+  // It then declares and sets a variable that is set to this href attribute of the link that was clicked
+  // A jQuery object is then created that references the #content element
+  // A selector finds the <a> with a class of 'current' and removes the class from it
+  // It then adds a class of 'current' to this link
+  // A selector finds the #container element and removes it from the DOM
+
+  // A $.ajax() request is then created
+    // It first contains the type of request it is - a GET or POST - and in this case it is a GET request
+    // It then sets the url to the url variable that was created (holding this href)
+    // It then sets a timeout property for the the request to wait two seconds before the response
+    // The beforeSend property is set to an anonymous function that takes the cached $content element and adds and <div> to it telling the user that the content is loading
+    // Once the request is completed an anonymous function removes the <div> that was created in the beforeSend step
+    // On success an anonymous function that ahs been passed data as a parameter is called
+      // The function takes the cached $content element and sets its HTML to find the #container element of the link that was clicked
+      // The content is immediately hidden and then faded in
+    // On error an anonymous function sets the HTML of the cached $content element to a <div> that tells the user to try again later

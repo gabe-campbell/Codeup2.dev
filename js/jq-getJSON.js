@@ -31,6 +31,25 @@ function loadRates() {
 
 loadRates();                                             // Call loadRates()
 
-// When working locally in Firefox, you may see an error saying that the JSON is not well-formed.
-// This is because Firefox is not reading the correct MIME type (and it can safely be ignored).
-// If you get it on a server, you may need to se the MIME type for JSON on the server (application/JSON).
+// The script begins by selecting the #exchangerates element and adding HTML to hold the data that will be received and a div that will hold the refresh button
+
+// A function is then declared
+  // The first line of the function is a $.getJSON method, which is passed three methods called .done(), .fail(), and .always()
+  // The first method - .done() - is a method that will run only if the request has been successfully completed
+    // It runs an anonymous function that is passed data as a parameter, once the request has been completed the function is rn
+    // It creates a new Date() object and then uses it to get the hours and minutes
+    // It then creates a variable called msg to hold the content that will be displayed
+    // There is then a .each() method which is passed data and a function, which itself is passed key and val as parameters
+      // For each key that is found in the rates.json file a <div> is created with a class of the corresponding key, then the key itself is added into the div and concatenated with its corresponding value from the .json file, all of this is then added to the msg variable
+    // The msg variable is then updated with the hrs and mins showing when the page was last updated
+    // The #rates element and its HTML is set to the msg variable
+  // The second method - .fail() - is passed an anonymous function as a parameter and runs if the request is not successfully completed
+    // The function takes the #rates element and sets its text to an error message that is displayed to the user
+  // The final method - .always() - is passed a function that always runs, even if the request does or does not get successfully completed
+    // The function declares and sets a variable called reload that holds a link tag, which will be used as the refresh button
+    // It then adds an image to the refresh link and closes the link tag
+    // The #reload element is then selected and its HTML is set to the reload variable
+    // An event listener is then added on the #refresh element that is fired by a click, triggering an anonymous function that has been passsed the event object as a parameter
+      // The function prevents the link from submitting
+      // It the calls the loadRates() function
+// The loadRates() function is called once at the end of the script
