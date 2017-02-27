@@ -15,3 +15,14 @@ if (Modernizr.sessionstorage) {
     sessionstorage.setItem('answer', txtAnswer.value);
   }, false);
 }
+
+
+// The script begins by using an if statement using Modernizr to see if session storage is supported by the browser
+  // If it does not then the script ends
+  // If it is then the script continues
+    // Two variables are created and store references to DOM objects
+
+    // The variables use the .value property to see if there is already value stored within the variables, if it is then it is written into the corresponding input
+
+    // Two event listeners are then created to that are fired by inputs, and trigger anonymous functions
+      // These functions then use the .setItem() method to take the information in the inputs and stores it in the storage object

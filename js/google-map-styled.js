@@ -99,3 +99,10 @@ function loadScript() {
 }
 
 window.onload = loadScript;
+
+// This script is initialized by the .onload method on the window object, calling the loadScript function
+  // loadScript creates the script containing the google map and uses a callback to call init
+  // init() creates the inital map options and includes a series of properties that each take a boolean and, if needed, additional properties to modify certain controls
+    // The boolean value tells the script if the script should includ (true) or shouldn't include (false) a specific control
+    // The styles [] property controls specific attributes for how the map should be displayed
+    // The startPosition variable creates a new marker and sets its position, map it is attached to, and the image that is used to represent it
