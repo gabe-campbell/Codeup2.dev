@@ -67,3 +67,36 @@
 
   $(init);                              // Call init() when DOM is ready
 }());
+
+// The function is stored in an IIFE
+  // An array of objects is created
+
+  // An array and a series of jQuery objects are declared and set to reference document elements
+
+  // A function called makeRows is then declared
+    // The function uses a .forEach() on the people array to call an anonymous function that has been passed person as a parameter
+      // A new jQuery object is then created and set to hold markup for a <tr> elements
+      // The $row object then has a <td> element added with the persons name and the persons rate
+      // the .push() method is used on the rows array to add person: person and $element: $row
+
+  // A function called appendRows() is then declared
+    // The function creates a jQuery object that holds markup for a <tbody> element
+    // The .forEach() method is used on the rows array to call an anonymous function that has been passed row as a parameter
+      // The .append() method is then used on the $tbody object to add the $element reference from the rows array
+    // The .append() method is then used on the $table object to add the $tbody object
+
+  // The update() function is declared and passed min and max as parameters
+    // The .forEach() method is called on the rows array, calling an anoynmous that has been passed row as a parameter
+      // An if statement checks to see what elements are greater than the min value and less than the max value
+        // If the row meets that criteria the element has the .show() method called on it
+        // If the row does not meet the criteria it has the .hide() method called on it
+
+
+// The init() function is then declared
+  // The #slider element is selected and hs the noUiSlider() method called on it, creating the settings for the slider
+  // The .change method is chained to the slider method to act as an event listener to call the update function whenever there is a change event on the sliders
+  // The makeRows() function is then called
+  // The appendRows() function is then called
+  // The update() function is called and passed the min and max vals as arguments
+
+// Once the DOM is ready, the init function is called once in order to initialized the slider and to create the rows and to add them to the table and then the upate function is called to set the initial values for the slider
