@@ -39,3 +39,26 @@
     }
   }
 }());
+
+// The script is placed into an IIFE
+  // It bgeins by declaring and setting a series of variables
+    // The first is called type and is set to the #equipmentType element
+    // The second is called model and is set to the #model element
+    // The third is called cameras and is set to an object containing a series of key/value pairs with the name of the camera and its full name
+    // The fourth is called projectors ad is set to an object containing a series of key/value pairs with the name of the projector and its full name
+
+  // The addEvent() function is then called on the type element to fire on a change, triggering an anoymous function
+    // The function uses an if statement to see if the value of this selected option from the select element is equal to the default choose option
+      // If so, then the text of the option is set to prompt the user to select an option
+      // The function then returns
+
+    // A variable called models is declared and is set to the getModels() function value to get the value of the currently selected option
+
+    // A variable called options is then declared and set to contain markup for an option element
+    // A variable called key is then declared
+    // A for loop then loops through all of the keys in the currently selected object array and displays the name of the key value pairs that are within
+    // The innerHTML of the model variable is then set to the options markup
+
+  // The getModels() function is then declared and passed the equipmentType attribute as a parameter
+    // An if statement then checks to see if the equipmentType is equal to 'cameras', if it is then it returns the cameras object
+    // Else if the equipmentType is equal to 'projectors', then it returns the projectors object
