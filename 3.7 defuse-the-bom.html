@@ -21,6 +21,7 @@
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
+            document.body.style['background-color'] = "red";
             clearInterval(intervalId);
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
@@ -39,6 +40,7 @@
     function defuseTheBOM() {
       clearInterval(intervalId);
       document.body.innerHTML = '<div>You defused the BOM!</div>';
+      document.body.style['background-color'] = "green";
     };
 
     // Don't modify anything below this line!
