@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Defuse the BOM</title>
+    <link rel="stylesheet" href="css/defuseBOM.css">
 </head>
 <body>
 
 <h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
-
 
 <script>
 (function() {
@@ -19,10 +19,9 @@
     // TODO: This function needs to be called once every second
     function updateTimer() {
         if (detonationTimer == 0) {
-            clearInterval(intervalID);
-            document.body.style['background-color'] = "red";
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
+            clearInterval(intervalId);
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
@@ -30,14 +29,17 @@
         detonationTimer--;
     }
 
+    var interval = 1000;
+    var intervalId = setInterval(function() {
+      updateTimer();
+    }, interval);
+
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-      document.getElementById("message").innerHTML = "BOM defused, you have survived!";
-      clearInterval(intervalID);
-    }
-
-    var intervalID = setInterval(updateTimer, 1000)
+      clearInterval(intervalId);
+      document.body.innerHTML = '<div>You defused the BOM!</div>';
+    };
 
     // Don't modify anything below this line!
     //
