@@ -108,6 +108,7 @@ function changeSign(e) {
 
 function addDecimal() {
   if (numDecimal == 0) {
+    msg += '.';
     updateMsg();
   }
   numDecimal++;
