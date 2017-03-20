@@ -7,7 +7,7 @@
     <body>
       <div class="container">
         <input type="text" readonly class="input" id="left-box">
-        <input type="text" readonly class="input" id="operand">
+        <input type="text" readonly class="input" id="operator">
         <input type="text" readonly class="input" id="right-box">
 
         <button class="button number" id="one" value="1">1</button>
@@ -27,8 +27,13 @@
 
         <button class="button function" id="clear" >C</button>
         <button class="button number" id="zero" value="0">0</button>
-        <button class="button operand" id="equals" >=</button>
+        <button class="button" id="equals" >=</button>
         <button class="button operand" id="divide" value="/">/</button>
+
+        <button class="button" id="decimal" value=".">.</button>
+        <button class="button function" id="sign">+/-</button>
+
+        <input type="text" readonly class="input" id="result">
 
       </div>
     <script src="js/jquery-1.11.0.js"></script>
