@@ -72,7 +72,11 @@ function switchInputs() {
 function getOperator(e) {
   var target = getTarget(e);
   operation[0] = target.value;
-  opInput.value = operation[0];
+  if (target.value === "root") {
+    opInput.value = "\u221A";
+  } else {
+    opInput.value = operation[0];
+  }
 }
 
 function getResult() {
@@ -96,6 +100,10 @@ function getResult() {
     case "%":
       resultNum = (leftNum / rightNum) * 100;
       resultInput.value = resultNum + '%';
+      break;
+    case "root":
+      resultNum = Math.pow(rightNum, (1/leftNum));
+      resultInput.value = resultNum;
       break;
     default:
       console.log("Something went wrong...");
