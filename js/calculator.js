@@ -93,6 +93,10 @@ function getResult() {
       resultNum = leftNum / rightNum;
       resultInput.value = resultNum;
       break;
+    case "%":
+      resultNum = (leftNum / rightNum) * 100;
+      resultInput.value = resultNum + '%';
+      break;
     default:
       console.log("Something went wrong...");
   }
