@@ -1,0 +1,38 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>jQuery Exercises</title>
+    </head>
+    <body>
+
+      <h1 class="header" id="header_one">Page Title</h1>
+      <div>
+        <p id="paragraph">This paragraph will contain an unordered list and a series of list items
+          <ul id="list">
+            <h2 class="header" id="header_two">List of Items</h2>
+            <li class="item" id="item_one">Item 1</li>
+            <li class="item" id="item_two">Item 2</li>
+            <li class="item" id="item_three">Item 3</li>
+          </ul>
+        </p>
+      </div>
+
+      <script src="js/jquery-2.2.4.js" charset="utf-8"></script>
+      <script>
+        "use strict";
+
+        $(document).ready(function() {
+
+        // INSERT JAVASCRIPT CODE SAMPLE HERE
+          var contents = $('#item_two').html();
+          alert(contents);
+
+          var contents2 = $('#header_two').html();
+          alert(contents2);
+
+          var contents3 = $('#list').html();
+          alert(contents3);
+        });
+      </script>
+    </body>
+  </html>
