@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict";
+        var codeMsg = '';
+        var codeCounter = 0;
+
+        $(document).keyup(function(event){
+            console.log(event.keyCode);
+            codeMsg += event.keyCode;
+            codeCounter++;
+            console.log(codeCounter);
+            console.log(codeMsg);
+
+            if (codeCounter == 11) {
+              if (codeMsg === '3838404037393739666513') {
+                alert('You have gained 30 lives!');
+                codeCounter = 0;
+                codeMsg = '';
+              } else {
+                alert('You have input the wrong code! Try again!');
+                codeCounter = 0;
+                codeMsg = '';
+              }
+            }
+        });
+    </script>
+</body>
+</html>
