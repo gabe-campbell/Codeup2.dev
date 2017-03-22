@@ -1,5 +1,6 @@
 body {
   background-color: #444;
+  height: 105vh;
 }
 .container {
   display: flex;
@@ -8,16 +9,17 @@ body {
   height: 60vh;
   width: 50%;
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 25%;
   border: 8px solid #444;
 }
 
 input, button {
-  font-size: 35px;
+  font-size: 100%;
   height: 20%;
   width: 25%;
   text-align: center;
+  border: 1px solid #444;
 }
 
 
@@ -51,6 +53,10 @@ input, button {
 }
 
 .button {
-  font-size: 35px;
+  font-size: 100%;
   background-color: #c0dfd9;
+}
+
+:focus {
+  outline: none;
 }

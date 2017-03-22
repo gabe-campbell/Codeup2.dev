@@ -106,6 +106,7 @@ function getResult() {
       resultInput.value = resultNum;
       break;
     default:
+      resultInput.value = "Something went wrong...";
       console.log("Something went wrong...");
   }
 }

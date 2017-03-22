@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8Qn31tUAqc81uJvAYtCO2MYOGpBRuhdA"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 15,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.584528,
+                lng: -98.626992
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        // Include code from previous example
+        var colleges = {
+          "UTSA": {
+            "name": "University of Texas at San Antonio",
+            "address": "UTSA Boulevard, San Antonio, TX 78249",
+            "latLng": { lat: 29.584528, lng: -98.626992 },
+            "facts": "<div><h1>University of Texas At San Antonio</h1><ul><li>Established in 1969</li><li>Mascot is the Roadrunner</li><li>28,959 Students</li><li>167 Degree Programs</li><li>1,412 Faculty Members</li><li>112,000 Alumni</li></ul></div>"
+          },
+          "NVC": {
+            "name": "Northwest Vista College",
+            "address": "3535 N Ellison Dr, San Antonio, TX 78251",
+            "latLng": { lat: 29.471456, lng: -98.705207 },
+            "facts": "<div><h1>Northwest Vista College</h1><ul><li>Established in 1881</li><li>Mascot is the Cardinal</li><li>15,921 Students</li><li>90 Degree Programs</li><li>813 Faculty Members</li><li>98,000 Alumni</li></ul></div>"
+          },
+          "UIW": {
+            "name": "University of the Incarnate Word",
+            "address": "4301 Broadway St, San Antonio, TX 78209",
+            "latLng": { lat: 29.467594, lng: -98.467622 },
+            "facts": "<div><h1>University of the Incarnate Word</h1><ul><li>Established in 1881</li><li>Mascot is the Cardinal</li><li>10,084 Students</li><li>90 Degree Programs</li><li>815 Faculty Members</li><li>172,000 Alumni</li></ul></div>"
+        }
+      }
+
+        // Set our address to geocode
+        var collegeOneAddress = colleges.UTSA.address;
+        var collegeTwoAddress = colleges.NVC.address;
+        var collegeThreeAddress = colleges.UIW.address;
+
+        var collegeOneLatLng = colleges.UTSA.latLng;
+        var collegeTwoLatLng = colleges.NVC.latLng;
+        var collegeThreeLatLng = colleges.UIW.latLng;
+        // Init geocoder object
+        var geocoder = new google.maps.Geocoder();
+
+        // Geocode our address
+        geocoder.geocode({ "address": collegeOneAddress }, function(results, status) {
+
+           // Check for a successful result
+           if (status == google.maps.GeocoderStatus.OK) {
+
+               // Recenter the map over the address
+               map.setCenter(results[0].geometry.location);
+           } else {
+
+               // Show an error message with the status if our request fails
+               alert("Geocoding was not successful - STATUS: " + status);
+           }
+        });
+
+        // Create lat and long for our marker position
+        var imageOne = {
+          url: "images/utsa.png",
+          size: new google.maps.Size(45, 65)
+        };
+        var imageTwo = {
+          url: "images/Alamo-colleges-logo.png",
+          size: new google.maps.Size(45, 65)
+        };
+        var imageThree = {
+          url: "images/Incarnate_Word_Cardinals_Logo.png",
+          size: new google.maps.Size(45, 65)
+        };
+
+        // Add the marker to our existing map
+        var markerOne = new google.maps.Marker({
+            position: collegeOneLatLng,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: imageOne
+        });
+
+        var markerTwo = new google.maps.Marker({
+            position: collegeTwoLatLng,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: imageTwo
+        });
+
+        var markerThree = new google.maps.Marker({
+            position: collegeThreeLatLng,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: imageThree
+        });
+
+        // Create a new infoWindow object with content
+        var infowindowOne = new google.maps.InfoWindow({
+            content: colleges.UTSA.facts
+        });
+
+        var infowindowTwo = new google.maps.InfoWindow({
+            content: colleges.NVC.facts
+        });
+
+        var infowindowThree = new google.maps.InfoWindow({
+            content: colleges.UIW.facts
+        });
+        // Open the window using our map and marker
+        // infowindow.open(map, marker);
+
+        function openWindowOne() {
+          infowindowOne.open(map, markerOne);
+        }
+
+        function openWindowTwo() {
+          infowindowTwo.open(map, markerTwo);
+        }
+
+        function openWindowThree() {
+          infowindowThree.open(map, markerThree);
+        }
+        markerOne.addListener('click', openWindowOne, false);
+        markerTwo.addListener('click', openWindowTwo, false);
+        markerThree.addListener('click', openWindowThree, false);
+    })();
+    </script>
+</body>
