@@ -1,0 +1,108 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>National Parks</title>
+      <style>
+        .invisible {
+          display: none;
+        }
+
+        .highlighted {
+          background-color: yellow;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>11 Facts about National Parks</h1>
+      <dl>
+        <dt>Fact 1</dt>
+        <dd>In the National Park System, there are 407 sites covering more than 84 million acres of land.</dd>
+        <dt>Fact 2</dt>
+        <dd>The Appalachian Trail is a 2,185 mile long public footpath that traverses the scenic, wooded, pastoral, wild, and culturally resonant lands of the Appalachian Mountains.</dd>
+        <dt>Fact 3</dt>
+        <dd>In 2014, more than 290 million people visited the National Parks.</dd>
+        <dt>Fact 4</dt>
+        <dd>The nation’s deepest cave is 1,593 ft deep in New Mexico at Carlsbad Caverns National Park.</dd>
+        <dt>Fact 5</dt>
+        <dd>Originally established by Congress as Hot Springs Reservation in 1832 and later becoming a national park in 1921, Hot Springs National Park represents the oldest protected area in the National Park System.</dd>
+        <dt>Fact 6</dt>
+        <dd>In the National Park System there are: 124 historical parks or sites, 78 national monuments, 59 national parks, 25 battlefields or military parks, 18 preserves, 18 recreational areas, 10 seashores, 4 parkways, 4 lakeshores and 2 reserves.</dd>
+        <dt>Fact 7</dt>
+        <dd>Yosemite National Park supports more than 400 species of vertebrates including fish, amphibians, reptiles, birds, and mammals.</dd>
+        <dt>Fact 8</dt>
+        <dd>There is 1 active volcano, thousands of petrified trees, and almost 300 waterfalls in Yellowstone National Park.</dd>
+        <dt>Fact 9</dt>
+        <dd>Seneca Falls National Park in New York is the location of the First Women’s Right Conventions, where expanding rights of women were discussed in the mid-19th century.</dd>
+        <dt>Fact 10</dt>
+        <dd>The largest living things in the world are in National Parks: Sequoia trees and Alaskan brown bears (the world’s largest living carnivores).</dd>
+        <dt>Fact 11</dt>
+        <dd>There are 27,000 historic and prehistoric structures preserved within the National Parks System.</dd>
+      </dl>
+
+      <ul class="list">
+        <h3 class="park">GREAT SMOKY MOUNTAINS</h3>
+        <li>Among the Oldest Mountains in the World</li>
+        <li>Over 800 Miles of Hiking</li>
+        <li>Home to Dozens of Waterfalls</li>
+        <li>Temperatures Never Go Above 80 Degrees</li>
+      </ul>
+
+      <ul class="list">
+        <h3 class="park">GRAND CANYON</h3>
+        <li>We don't really know how old it is</li>
+        <li>The Grand Canyon creates its own weather</li>
+        <li>It's not the deepest canyon in the world</li>
+        <li>There are no dinosaur bones in the canyon</li>
+      </ul>
+
+      <ul class="list">
+        <h3 class="park">YOSEMITE</h3>
+        <li>Yosemite was not America’s first national park</li>
+        <li>A Scottish immigrant spearheaded Yosemite National Park’s creation</li>
+        <li>Sheep were once among the primary threats to Yosemite’s natural landscape</li>
+        <li>At first, the national park did not include the Yosemite Valley and its iconic landmarks</li>
+      </ul>
+
+      <a href="#" id="toggle">Show Facts</a>
+      <a href="#" id="toggle2">Hightlight Item</a>
+
+      <script src="js/jquery-2.2.4.js" charset="utf-8"></script>
+      <script type="text/javascript">
+        "use strict";
+
+        $(document).ready(function() {
+          $('dd').addClass('invisible');
+
+          $('#toggle').on('click', function() {
+            $('dd').toggleClass('invisible');
+            console.log('The link has been clicked');
+            if ($('#toggle').html() === 'Show Facts') {
+              $('#toggle').html('Hide Facts');
+            } else {
+              $('#toggle').html('Show Facts');
+            }
+          });
+
+          $('dt').on('click', function() {
+            $(this).toggleClass('highlighted');
+          });
+
+          $('#toggle2').on('click', function() {
+            $('.list').each( function() {
+                $(this).children().last().css('background-color', 'yellow');
+            });
+          });
+
+          $('h3').on('click', function() {
+            $(this).siblings().css('font-weight', 'bold');
+          });
+
+          $('li').on('click', function() {
+            $(this).parent().children('li').first().css('color', 'blue');
+          });
+        });
+
+
+      </script>
+    </body>
+  </html>
