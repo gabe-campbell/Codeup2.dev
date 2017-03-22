@@ -10,7 +10,7 @@ This Repository contains exercises from the following sources:
 
 -Angular Basics resources at http://www.angularjsbook.com/ and http://www.angularjs.org
 
--"PHP and MySQL for Dynamic Websites" by Larry Ullman
+-"Learning PHP, MySQL & JavaScript" by Robin Nixon
 
 -The jQuery Documentation at http://api.jquery.com
 
