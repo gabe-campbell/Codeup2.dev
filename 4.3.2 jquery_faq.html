@@ -10,9 +10,36 @@
         .highlighted {
           background-color: yellow;
         }
+
+        #newsletter {
+          background-color: #d8d4d4;
+
+        }
+
+
       </style>
+      <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
     </head>
     <body>
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Would you like to sign up for our newsletter?
+      </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Would you like to sign up for out site?</button>
+
+      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            Register here to sign up
+            <form action="">
+              <label for="name">Username: </label><input type="text" name="name" value="Enter username here...">
+              <label for="password">Password:  </label><input type="password" name="password" value="Enter password here...">
+              <label for="passwordConfirm">Password: </label><input type="password" name="passwordConfirm" value="Confirm password here...">
+              <button href="#">Sign up!</button>
+            </form>
+          </div>
+        </div>
+      </div>
       <h1>11 Facts about National Parks</h1>
       <dl>
         <dt>Fact 1</dt>
@@ -39,24 +66,24 @@
         <dd>There are 27,000 historic and prehistoric structures preserved within the National Parks System.</dd>
       </dl>
 
+      <h3 class="park">GREAT SMOKY MOUNTAINS</h3>
       <ul class="list">
-        <h3 class="park">GREAT SMOKY MOUNTAINS</h3>
         <li>Among the Oldest Mountains in the World</li>
         <li>Over 800 Miles of Hiking</li>
         <li>Home to Dozens of Waterfalls</li>
         <li>Temperatures Never Go Above 80 Degrees</li>
       </ul>
 
+      <h3 class="park">GRAND CANYON</h3>
       <ul class="list">
-        <h3 class="park">GRAND CANYON</h3>
         <li>We don't really know how old it is</li>
         <li>The Grand Canyon creates its own weather</li>
         <li>It's not the deepest canyon in the world</li>
         <li>There are no dinosaur bones in the canyon</li>
       </ul>
 
+      <h3 class="park">YOSEMITE</h3>
       <ul class="list">
-        <h3 class="park">YOSEMITE</h3>
         <li>Yosemite was not America’s first national park</li>
         <li>A Scottish immigrant spearheaded Yosemite National Park’s creation</li>
         <li>Sheep were once among the primary threats to Yosemite’s natural landscape</li>
@@ -67,6 +94,7 @@
       <a href="#" id="toggle2">Hightlight Item</a>
 
       <script src="js/jquery-2.2.4.js" charset="utf-8"></script>
+      <script src="bootstrap-3.3.7-dist/js/bootstrap.js" charset="utf-8"></script>
       <script type="text/javascript">
         "use strict";
 
@@ -100,6 +128,16 @@
           $('li').on('click', function() {
             $(this).parent().children('li').first().css('color', 'blue');
           });
+
+          $('#span-close').on('click', function() {
+            $(this).parent().hide();
+          });
+
+          $('.modal').hide().on('hide.bs.modal', function() {
+            $(this).fadeIn(8000);
+          });
+
+
         });
 
 
