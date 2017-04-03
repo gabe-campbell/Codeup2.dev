@@ -1,0 +1,170 @@
+body {
+  background-color: #444;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+#gameContainer {
+  height: 90vh;
+  width: 45vw;
+  position: relative;
+  left: 22em;
+  top: 2em;
+  background-color: white;
+  border-radius: 22em;
+}
+
+/*:focus {
+  outline: none;
+}*/
+
+.gameButton {
+  height: 45vh;
+  width: 22.5vw;
+  position: relative;
+  z-index: 1;
+  border: 5px solid black;
+}
+
+#buttonGreen {
+  background-image: linear-gradient(#008000 20%, #089308, #097209);
+  border-top-left-radius: 28em;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+}
+
+#buttonRed {
+  background-image: linear-gradient(#FF0000 20%, #e80d0d 40%, #ea0404 80%);
+  border-top-right-radius: 28em;
+  left: 27.95em;
+  top: -27.45em;
+  border-top: 10px solid black;
+  border-right: 10px solid black;
+}
+
+#buttonYellow {
+  background-image: linear-gradient(#FFFF00 20%, #f4f427 40%, #eaea07 80%);
+  border-bottom-left-radius: 28em;
+  top: -27.45em;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+}
+
+#buttonBlue {
+  background-image: linear-gradient(#0000FF 20%, #2020fc 40%, #0606e8 80%);
+  border-bottom-right-radius: 28em;
+  left: 27.95em;
+  top: -54.9em;
+  border-bottom: 10px solid black;
+  border-right: 10px solid black;
+}
+
+#gameControls {
+  background-image: linear-gradient(#C0C0C0 40%, #ccc5c5, #bcb5b5);
+  height: 30vh;
+  width: 15vw;
+  position: fixed;
+  top: 14.5em;
+  left: 34.5em;
+  display: inline;
+  z-index: 999;
+  border-radius: 10em;
+  border: 10px solid black;
+}
+
+#gameTitle {
+  z-index: 998;
+  background-color: black;
+  color: silver;
+  height: 14.5vh;
+  width: 14.5vw;
+  position: relative;
+  top: .225em;
+  left:  .225em;
+  border-top-left-radius: 10em;
+  border-top-right-radius: 10em;
+}
+
+#gameText {
+  position: relative;
+  top: 1.1em;
+  left: .3em;
+  font-family: Verdana;
+  font-size: 2.75em;
+  font-weight: 900;
+  z-index: 999;
+
+}
+
+#newGame {
+  background-color: yellow;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  bottom: 5em;
+  left: 4em;
+  border-radius: 1.5em;
+  border: 3px solid black;
+  color: black;
+}
+
+#newGameLabel {
+  font-family: Verdana;
+  font-weight: 900;
+  font-size: .5em;
+  width: 3.25em;
+  height: 2em;
+  background-color: silver;
+  position: absolute;
+  bottom: 3em;
+  left: 4.4em;
+}
+
+#switchMode {
+  background-color: red;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  bottom: 4em;
+  left: 8.5em;
+  border-radius: 1.5em;
+  border: 3px solid black;
+  color: black;
+}
+
+#switchModeLabel{
+  font-family: Verdana;
+  font-weight: 900;
+  font-size: .5em;
+  width: 4em;
+  height: 2em;
+  background-color: silver;
+  position: absolute;
+  bottom: 1.5em;
+  left: 9em;
+}
+
+#mute {
+  background-color: yellow;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  bottom: 5em;
+  left: 13em;
+  border-radius: 1.5em;
+  border: 3px solid black;
+  color: black;
+}
+
+#muteLabel {
+  font-family: Verdana;
+  font-weight: 900;
+  font-size: .5em;
+  width: 2em;
+  height: 2em;
+  background-color: silver;
+  position: absolute;
+  bottom: 2.5em;
+  left: 15.5em;
+}

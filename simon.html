@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Simon</title>
+    <link rel="stylesheet" href="css/simon.css">
+  </head>
+  <body>
+    <div id="gameContainer">
+      <button class="gameButton" id="buttonGreen" value="0"></button>
+      <button class="gameButton" id="buttonRed" value="1"></button>
+        <div id="gameControls">
+          <div id="gameTitle"><span id="gameText">SIMON</span></div>
+          <button id="newGame"></button>
+          <p id="newGameLabel">&nbsp;New Game</p>
+          <button id="switchMode"></button>
+          <p id="switchModeLabel">&nbsp;&nbsp;Switch Difficulty</p>
+          <button id="mute"></button>
+          <p id="muteLabel">Mute</p>
+        </div>
+      <button class="gameButton" id="buttonYellow" value="3"></button>
+      <button class="gameButton" id="buttonBlue" value="4"></button>
+    </div>
+
+    <script src="js/jquery-1.11.0.js" charset="utf-8"></script>
+    <script src="js/simon.js" charset="utf-8"></script>
+    <script>
+    var greenButton  = document.getElementById("#buttonGreen");
+    var redButton = document.getElementById("#buttonRed");
+    var yellowButton = document.getElementById("#buttonYellow");
+    var blueButton = document.getElementById("#buttonBlue");
+
+    $(greenButton).on('click', greenFunction, false);
+
+    function greenFunction() {
+      console.log("The green button was clicked");
+    }
+    </script>
+  </body>
+</html>
