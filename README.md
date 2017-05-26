@@ -14,4 +14,6 @@ This Repository contains exercises from the following sources:
 
 -The jQuery Documentation at http://api.jquery.com
 
+-The problems off of LeetCode.com 
+
 This list will be updated continually as I explore more topics and gain new skills
